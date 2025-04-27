@@ -70,3 +70,12 @@
 // });
 
 // export default AddGoalScreen;
+import { View, Text } from 'react-native';
+
+export default function Goals() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#0F0F0F' }}>
+      <Text style={{ color: 'white' }}>Goals Page</Text>
+    </View>
+  );
+}
