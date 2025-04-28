@@ -192,7 +192,7 @@ export default function Signup() {
     } as any);
 
     try {
-      const response = await axios.post('http://192.168.89.148:8000/signup', formData, {
+      const response = await axios.post('http://ec2-13-60-91-252.eu-north-1.compute.amazonaws.com:8000/signup', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       console.log(response.data);
@@ -205,7 +205,7 @@ export default function Signup() {
 
   const verifyOtp = async () => {
     try {
-      const response = await axios.post('http://192.168.89.148:8000/verify-otp', {
+      const response = await axios.post('http://ec2-13-60-91-252.eu-north-1.compute.amazonaws.com/verify-otp', {
         email,
         otp,
       }, {

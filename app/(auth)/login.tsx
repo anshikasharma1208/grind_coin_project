@@ -49,7 +49,7 @@ export default function Login() {
     }
 
     try {
-      const response = await axios.post('http://192.168.89.148:8000/login', formData, {
+      const response = await axios.post('http://ec2-13-60-91-252.eu-north-1.compute.amazonaws.com:8000/login', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 

@@ -26,7 +26,7 @@ export default function Dashboard() {
   const fetchGoals = async () => {
     try {
       setFetchingGoals(true);
-      const response = await axios.get(`http://192.168.89.148:8000/get-goals?email=${userEmail}`);
+      const response = await axios.get(`http://ec2-13-60-91-252.eu-north-1.compute.amazonaws.com:8000/get-goals?email=${userEmail}`);
       setGoals(response.data.goals || []);
     } catch (error) {
       console.error(error);
@@ -48,7 +48,7 @@ export default function Dashboard() {
       formData.append('deadline', newGoalDeadline);
       formData.append('duration', newGoalDuration);
 
-      await axios.post('http://192.168.89.148:8000/add-goal', formData, {
+      await axios.post('http://ec2-13-60-91-252.eu-north-1.compute.amazonaws.com:8000/add-goal', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 
@@ -90,9 +90,9 @@ export default function Dashboard() {
       } as any);
 
       // Upload video to backend
-      await axios.post('http://192.168.89.148:8000/complete-goal-video', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      });
+      // await axios.post('http://ec2-13-60-91-252.eu-north-1.compute.amazonaws.com:8000/complete-goal-video', formData, {
+      //   headers: { 'Content-Type': 'multipart/form-data' }
+      // });
 
       Alert.alert('Success', 'Goal marked as completed! 🏆 +10 coins');
 
