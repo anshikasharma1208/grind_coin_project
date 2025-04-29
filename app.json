@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "androidCleartextTrafficPermitted": true 
+      "androidCleartextTrafficPermitted": true,
+      "package": "com.grind_coin"
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +38,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "c88b656e-f6ef-42d3-9f7b-a954e4a419ca"
+      }
     }
   }
 }
